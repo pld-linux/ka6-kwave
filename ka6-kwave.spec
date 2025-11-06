@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kwave
 Summary:	Sound editor
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	9ee6d1a0bc5c7f1bf4ef0195ae3c96a5
+# Source0-md5:	41dcfa2a62cd06abdd7572d5810f4fee
 URL:		http://www.kde.org/
 BuildRequires:	ImageMagick
 BuildRequires:	ImageMagick-coder-svg
@@ -119,40 +119,40 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kwave
 %ghost %{_libdir}/libkwave.so.2?
-%attr(755,root,root) %{_libdir}/libkwave.so.*.*
+%{_libdir}/libkwave.so.*.*
 %ghost %{_libdir}/libkwavegui.so.2?
-%attr(755,root,root) %{_libdir}/libkwavegui.so.*.*
+%{_libdir}/libkwavegui.so.*.*
 %dir %{_libdir}/qt6/plugins/kwave
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/about.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/amplifyfree.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/band_pass.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/codec_ascii.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/codec_audiofile.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/codec_flac.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/codec_mp3.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/codec_ogg.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/codec_wav.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/debug.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/export_k3b.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/fileinfo.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/goto.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/insert_at.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/lowpass.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/newsignal.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/noise.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/normalize.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/notch_filter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/pitch_shift.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/playback.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/record.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/reverse.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/samplerate.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/saveblocks.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/selectrange.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/sonagram.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/stringenter.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/volume.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kwave/zero.so
+%{_libdir}/qt6/plugins/kwave/about.so
+%{_libdir}/qt6/plugins/kwave/amplifyfree.so
+%{_libdir}/qt6/plugins/kwave/band_pass.so
+%{_libdir}/qt6/plugins/kwave/codec_ascii.so
+%{_libdir}/qt6/plugins/kwave/codec_audiofile.so
+%{_libdir}/qt6/plugins/kwave/codec_flac.so
+%{_libdir}/qt6/plugins/kwave/codec_mp3.so
+%{_libdir}/qt6/plugins/kwave/codec_ogg.so
+%{_libdir}/qt6/plugins/kwave/codec_wav.so
+%{_libdir}/qt6/plugins/kwave/debug.so
+%{_libdir}/qt6/plugins/kwave/export_k3b.so
+%{_libdir}/qt6/plugins/kwave/fileinfo.so
+%{_libdir}/qt6/plugins/kwave/goto.so
+%{_libdir}/qt6/plugins/kwave/insert_at.so
+%{_libdir}/qt6/plugins/kwave/lowpass.so
+%{_libdir}/qt6/plugins/kwave/newsignal.so
+%{_libdir}/qt6/plugins/kwave/noise.so
+%{_libdir}/qt6/plugins/kwave/normalize.so
+%{_libdir}/qt6/plugins/kwave/notch_filter.so
+%{_libdir}/qt6/plugins/kwave/pitch_shift.so
+%{_libdir}/qt6/plugins/kwave/playback.so
+%{_libdir}/qt6/plugins/kwave/record.so
+%{_libdir}/qt6/plugins/kwave/reverse.so
+%{_libdir}/qt6/plugins/kwave/samplerate.so
+%{_libdir}/qt6/plugins/kwave/saveblocks.so
+%{_libdir}/qt6/plugins/kwave/selectrange.so
+%{_libdir}/qt6/plugins/kwave/sonagram.so
+%{_libdir}/qt6/plugins/kwave/stringenter.so
+%{_libdir}/qt6/plugins/kwave/volume.so
+%{_libdir}/qt6/plugins/kwave/zero.so
 
 %files data -f %{kaname}.lang
 %defattr(644,root,root,755)
