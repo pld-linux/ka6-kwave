@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.12.1
+%define		kdeappsver	25.12.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kwave
 Summary:	Sound editor
 Name:		ka6-%{kaname}
-Version:	25.12.1
-Release:	2
+Version:	25.12.2
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	6b505052c9ed9ca612fc1510cd7347c2
+# Source0-md5:	3639a9fbdbb101d2711d4e0032b3fd5b
 URL:		http://www.kde.org/
 BuildRequires:	ImageMagick
 BuildRequires:	ImageMagick-coder-svg
